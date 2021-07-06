@@ -50,12 +50,12 @@ int main()
 		{
 		case 1:
 			std::cout << "Starting game..." << std::endl;
-			system("CLS");
+			system("CLS"); //Clear console
 			playGame();
 			break;
 		case 2:
 			std::cout << "Exiting game..." << std::endl;
-			system("CLS");
+			system("CLS"); //Clear console
 			return 0;
 		}
 	} while (choice != 2);
