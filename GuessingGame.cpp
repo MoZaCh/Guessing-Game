@@ -7,6 +7,34 @@
 
 using std::string;
 
+void playGame()
+{
+	int random = rand() % 251;
+	std::cout << "Guess a number: " << std::endl;
+
+	while (true)
+	{
+		int guess;
+		std::cin >> guess;
+
+		if (guess == random)
+		{
+			std::cout << "You win!" << std::endl;
+			//std::this_thread::sleep_for(std::chrono::seconds(2));
+			system("CLS");
+			break;
+		}
+		else if (guess < random)
+		{
+			std::cout << "Too low" << std::endl;
+		}
+		else
+		{
+			std::cout << "Too high" << std::endl;
+		}
+	}
+}
+
 int main()
 {
 	srand(time(NULL));
@@ -23,6 +51,7 @@ int main()
 		case 1:
 			std::cout << "Starting game..." << std::endl;
 			system("CLS");
+			playGame();
 			break;
 		case 2:
 			std::cout << "Exiting game..." << std::endl;
