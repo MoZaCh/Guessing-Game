@@ -1,4 +1,6 @@
 #include <iostream>
+#include <windows.h>
+#include <typeinfo>
 #include <chrono>
 #include <thread>
 #include <string>
@@ -20,6 +22,7 @@ void playGame()
 		if (guess == random)
 		{
 			std::cout << "You win!" << std::endl;
+			Sleep(2000);
 			//std::this_thread::sleep_for(std::chrono::seconds(2));
 			system("CLS");
 			break;
@@ -50,11 +53,13 @@ int main()
 		{
 		case 1:
 			std::cout << "Starting game..." << std::endl;
+			Sleep(1000);
 			system("CLS"); //Clear console
 			playGame();
 			break;
 		case 2:
 			std::cout << "Exiting game..." << std::endl;
+			Sleep(1000);
 			system("CLS"); //Clear console
 			return 0;
 		}
